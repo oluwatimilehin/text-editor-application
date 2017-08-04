@@ -33,7 +33,8 @@ public class DocumentBenchmarking {
 		// THe number of characters to start with. 
 		// You can play around with this.
 		int start = 50000;
-		
+
+		System.out.println("NumberOfChars\t" + "BasicTime\t"+ "EfficientTime");
 		// TODO: Fill in the rest of this method so that it runs two loops
 		// and prints out timing results as described in the assignment 
 		// instructions and following the pseudocode below.
@@ -42,7 +43,7 @@ public class DocumentBenchmarking {
 		{
 			// numToCheck holds the number of characters that you should read from the 
 			// file to create both a BasicDocument and an EfficientDocument.  
-			
+
 			/* Each time through this loop you should:
 			 * 1. Print out numToCheck followed by a tab (\t) (NOT a newline)
 			 * 2. Read numToCheck characters from the file into a String
@@ -57,8 +58,35 @@ public class DocumentBenchmarking {
 			 *     b. Calls fleshScore on this document
 			 * 6. Print out the time it took to complete the loop in step 5 
 			 *      (on the same line as the first print statement) followed by a newline (\n) 
-			 */  
-			 
+			 */
+            System.out.print(numToCheck + "\t");
+            String text = getStringFromFile(textfile, numToCheck);
+
+            long basicStartTime = System.nanoTime() / (10 ^ 9);
+
+            for(int i = 0; i < trials; i ++){
+                BasicDocument basicDoc = new BasicDocument(text);
+                basicDoc.getFleschScore();
+            }
+
+            long basicEndTime = System.nanoTime() / (10 ^ 9);
+
+            long totalBasicTime = basicEndTime - basicStartTime;
+
+            System.out.print(totalBasicTime + "\t");
+
+            long efficientStartTime = System.nanoTime() / (10 ^ 9);
+
+            for(int i = 0; i < trials; i ++){
+                EfficientDocument efficientDocument = new EfficientDocument(text);
+                efficientDocument.getFleschScore();
+            }
+
+            long efficientEndTime = System.nanoTime() / (10 ^ 9);
+
+            long totalEfficientTime = efficientEndTime - efficientStartTime;
+
+            System.out.print(totalEfficientTime + "\n");
 		}
 	
 	}
