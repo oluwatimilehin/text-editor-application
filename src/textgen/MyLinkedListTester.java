@@ -152,18 +152,38 @@ public class MyLinkedListTester {
 	public void testAddAtIndex()
 	{
         // TODO: implement this test
-		
 	}
 	
 	/** Test setting an element in the list */
 	@Test
 	public void testSet()
 	{
-	    // TODO: implement this test
+		try {
+			shortList.set(0, null);
+			fail("Allowing null values");
+		}catch (NullPointerException e){
+
+		}
+
+		try {
+			shortList.set(-1, "A");
+			fail("Index out of bounds not being caught");
+		}catch (IndexOutOfBoundsException e){
+
+		}
+
+		try {
+			emptyList.set(0, 5);
+			fail("Index out of bounds not being called");
+		}catch (IndexOutOfBoundsException e){
+
+		}
+
+		assertEquals("Replaced value", "A", shortList.set(0, "C"));
+		assertEquals("New value", "C", shortList.get(0));
+
 	    
 	}
-	
-	
-	// TODO: Optionally add more test methods.
+
 	
 }
