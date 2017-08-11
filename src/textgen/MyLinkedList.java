@@ -39,9 +39,13 @@ public class MyLinkedList<E> extends AbstractList<E> {
             }
 
             newNode.prev = current;
-            if (newNode.prev != null) {
+
+            try{
                 newNode.prev.next = newNode;
+            }catch (NullPointerException e){
+
             }
+
             newNode.next = tail;
             this.current = newNode;
             tail.prev = newNode;
@@ -78,7 +82,7 @@ public class MyLinkedList<E> extends AbstractList<E> {
      */
     public void add(int index, E element) {
 
-        if (index < 0 || index > size){
+        if (index < 1 || index > size){
             throw new IndexOutOfBoundsException();
         }
 

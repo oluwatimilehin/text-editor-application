@@ -144,6 +144,11 @@ public class MyLinkedListTester {
 
 		}
 
+		MyLinkedList<Integer> newList = new MyLinkedList<>();
+		newList.add(3);
+		newList.remove(0);
+		newList.add(33);
+		assertEquals("Add-remove", Integer.valueOf(33), newList.get(0));
 		assertEquals("Adding an element", true, shortList.add("Hello"));
 		assertEquals("Getting an element", "Hello", shortList.get(2));
 	}
@@ -185,7 +190,7 @@ public class MyLinkedListTester {
 
 		shortList.add(2, "C");
 		assertEquals("Moved nodes", "C", shortList.get(2));
-		shortList.add(0, "Z");
+		shortList.add(1, "Z");
 		assertEquals("Moved all nodes", "B", shortList.get(2));
 	}
 	
