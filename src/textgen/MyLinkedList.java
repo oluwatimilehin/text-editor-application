@@ -77,16 +77,47 @@ public class MyLinkedList<E> extends AbstractList<E> {
      * @param element The element to add
      */
     public void add(int index, E element) {
-        //TODO: Add more work on this
-        if (index < 0 || index >= size) {
+
+        if (index < 0 || index > size){
             throw new IndexOutOfBoundsException();
         }
 
+        if(element == null){
+            throw  new NullPointerException();
+        }
+
+        LLNode<E> newNode = new LLNode<E>(element);
         LLNode<E> node = head;
         for (int i = 0; i <= index; i++) {
             node = node.getNext();
         }
-        node.data = element;
+
+        if(node.data != null) {
+            newNode.next = node;
+            newNode.prev = node.prev;
+            newNode.data = element;
+            if(node.prev != null) {
+                node.prev.next = newNode;
+            }else{
+                head.next = newNode;
+            }
+            node.prev = newNode;
+        }else {
+            newNode.prev = node.prev;
+            newNode.next = tail;
+            tail.prev.next = newNode;
+            tail.prev = newNode;
+        }
+
+//        newNode.prev = current;
+//        if (newNode.prev != null) {
+//            newNode.prev.next = newNode;
+//        }
+//        newNode.next = tail;
+//        this.current = newNode;
+//        tail.prev = newNode;
+
+        size ++;
     }
 
 
@@ -165,11 +196,6 @@ class LLNode<E> {
         this.next = null;
     }
 
-    public LLNode(E e, LLNode<E> prev, LLNode<E> next) {
-        this(e);
-        this.prev = prev;
-        this.next = next;
-    }
 
     public LLNode() {
         this(null);

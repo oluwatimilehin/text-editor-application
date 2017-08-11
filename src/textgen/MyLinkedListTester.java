@@ -65,7 +65,8 @@ public class MyLinkedListTester {
 		// test short list, first contents, then out of bounds
 		assertEquals("Check first", "A", shortList.get(0));
 		assertEquals("Check second", "B", shortList.get(1));
-		
+
+
 		try {
 			shortList.get(-1);
 			fail("Check out of bounds");
@@ -78,7 +79,7 @@ public class MyLinkedListTester {
 			fail("Check out of bounds");
 		}
 		catch (IndexOutOfBoundsException e) {
-		
+
 		}
 		// test longer list contents
 		for(int i = 0; i<LONG_LIST_LENGTH; i++ ) {
@@ -144,7 +145,7 @@ public class MyLinkedListTester {
 		}
 
 		assertEquals("Adding an element", true, shortList.add("Hello"));
-		
+		assertEquals("Getting an element", "Hello", shortList.get(2));
 	}
 
 	
@@ -152,10 +153,13 @@ public class MyLinkedListTester {
 	@Test
 	public void testSize()
 	{
-		// TODO: implement this test
+		shortList.add("C");
+		assertEquals("Size after adding", 3, shortList.size());
+		shortList.remove(2);
+		assertEquals("Size after removing", 2, shortList.size() );
+
 	}
 
-	
 	
 	/** Test adding an element into the list at a specified index,
 	 * specifically:
@@ -164,7 +168,25 @@ public class MyLinkedListTester {
 	@Test
 	public void testAddAtIndex()
 	{
-        // TODO: implement this test
+		try{
+			shortList.add(3, "Hello");
+			fail("Uncaught index out of bounds exception");
+
+		}catch (IndexOutOfBoundsException e){
+
+		}
+
+		try{
+			shortList.add(1, null);
+			fail("Uncaught null pointer");
+		}catch (NullPointerException e){
+
+		}
+
+		shortList.add(2, "C");
+		assertEquals("Moved nodes", "C", shortList.get(2));
+		shortList.add(0, "Z");
+		assertEquals("Moved all nodes", "B", shortList.get(2));
 	}
 	
 	/** Test setting an element in the list */
@@ -194,7 +216,6 @@ public class MyLinkedListTester {
 
 		assertEquals("Replaced value", "A", shortList.set(0, "C"));
 		assertEquals("New value", "C", shortList.get(0));
-
 	    
 	}
 
