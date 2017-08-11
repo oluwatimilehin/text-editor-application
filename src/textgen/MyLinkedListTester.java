@@ -123,7 +123,14 @@ public class MyLinkedListTester {
 	@Test
 	public void testAddEnd()
 	{
-        // TODO: implement this test
+		try{
+			shortList.add(null);
+			fail("Null pointer exception not checked");
+		}catch (NullPointerException e){
+
+		}
+
+		assertEquals("Adding an element", true, shortList.add("Hello"));
 		
 	}
 

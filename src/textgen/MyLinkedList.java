@@ -12,34 +12,63 @@ import java.util.AbstractList;
 public class MyLinkedList<E> extends AbstractList<E> {
 	LLNode<E> head;
 	LLNode<E> tail;
+	LLNode<E> current = head;
+    LLNode<E> newNode;
 	int size;
 
 	/** Create a new empty LinkedList */
 	public MyLinkedList() {
-		// TODO: Implement this method
+
+        this.head = new LLNode<E>();
+        this.tail = new LLNode<E>();
+        size = 0;
 	}
 
 	/**
 	 * Appends an element to the end of the list
 	 * @param element The element to add
 	 */
-	public boolean add(E element ) 
+	public boolean add(E element )
 	{
-		// TODO: Implement this method
-		return false;
+	    if(element != null) {
+            newNode = new LLNode<>(element);
+            if(size == 0){
+                head.next = newNode;
+            }
+
+            newNode.prev = current;
+            if(newNode.prev != null) {
+                newNode.prev.next = newNode;
+            }
+            newNode.next = tail;
+            this.current = newNode;
+            tail.prev = newNode;
+            size++;
+            return true;
+        }else{
+	        throw new NullPointerException();
+        }
+
 	}
 
 	/** Get the element at position index 
 	 * @throws IndexOutOfBoundsException if the index is out of bounds. */
 	public E get(int index) 
 	{
-		// TODO: Implement this method.
-		return null;
+	    if(index < 0 || index >= size){
+	        throw new IndexOutOfBoundsException();
+        }
+
+        LLNode<E> node = head;
+        for(int i = 0; i <= index; i ++){
+            node = node.getNext();
+        }
+        return node.data;
 	}
 
 	/**
 	 * Add an element to the list at the specified index
-	 * @param The index where the element should be added
+	 * @param index The index where the element should be added
 	 * @param element The element to add
 	 */
 	public void add(int index, E element ) 
@@ -84,7 +113,7 @@ public class MyLinkedList<E> extends AbstractList<E> {
 class LLNode<E> 
 {
 	LLNode<E> prev;
-	LLNode<E> next;
+    LLNode<E> next;
 	E data;
 
 	// TODO: Add any other methods you think are useful here
@@ -96,5 +125,18 @@ class LLNode<E>
 		this.prev = null;
 		this.next = null;
 	}
+
+	public LLNode(E e, LLNode<E> prev, LLNode<E> next){
+	    this(e);
+	    this.prev = prev;
+	    this.next = next;
+    }
+
+	public LLNode(){
+	    this(null);
+    }
+    public LLNode<E> getNext() {
+        return this.next;
+    }
 
 }
