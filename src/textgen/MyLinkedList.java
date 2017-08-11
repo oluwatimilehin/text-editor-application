@@ -82,8 +82,12 @@ public class MyLinkedList<E> extends AbstractList<E> {
      */
     public void add(int index, E element) {
 
-        if (index < 1 || index > size){
-            throw new IndexOutOfBoundsException();
+        try {
+            if (index < 1 || index > size){
+                throw new IndexOutOfBoundsException();
+            }
+        }catch (IndexOutOfBoundsException e){
+
         }
 
         if(element == null){
@@ -96,6 +100,7 @@ public class MyLinkedList<E> extends AbstractList<E> {
             node = node.getNext();
         }
 
+        try{
         if(node.data != null) {
             newNode.next = node;
             newNode.prev = node.prev;
@@ -111,6 +116,9 @@ public class MyLinkedList<E> extends AbstractList<E> {
             newNode.next = tail;
             tail.prev.next = newNode;
             tail.prev = newNode;
+        }
+        }catch (NullPointerException e){
+
         }
 
 //        newNode.prev = current;
@@ -149,16 +157,21 @@ public class MyLinkedList<E> extends AbstractList<E> {
             node = node.getNext();
         }
 
-        E elementRemoved = node.data;
-        LLNode<E> prevNode = node.prev;
-        if(node.prev != null) {
-            node.prev.next = node.next;
-        }else{
-            head.next = node.next;
+        try {
+            E elementRemoved = node.data;
+            LLNode<E> prevNode = node.prev;
+            if(node.prev != null) {
+                node.prev.next = node.next;
+            }else{
+                head.next = node.next;
+            }
+            node.next.prev = prevNode;
+            size--;
+            return elementRemoved;
+        }catch (NullPointerException e){
+
         }
-        node.next.prev = prevNode;
-        size--;
-        return elementRemoved;
+        return null;
     }
 
     /**
