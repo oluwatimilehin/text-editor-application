@@ -40,9 +40,9 @@ public class MyLinkedList<E> extends AbstractList<E> {
 
             newNode.prev = current;
 
-            try{
+            try {
                 newNode.prev.next = newNode;
-            }catch (NullPointerException e){
+            } catch (NullPointerException e) {
 
             }
 
@@ -83,15 +83,15 @@ public class MyLinkedList<E> extends AbstractList<E> {
     public void add(int index, E element) {
 
         try {
-            if (index < 1 || index > size){
+            if (index < 1 || index > size) {
                 throw new IndexOutOfBoundsException();
             }
-        }catch (IndexOutOfBoundsException e){
+        } catch (IndexOutOfBoundsException e) {
 
         }
 
-        if(element == null){
-            throw  new NullPointerException();
+        if (element == null) {
+            throw new NullPointerException();
         }
 
         LLNode<E> newNode = new LLNode<E>(element);
@@ -100,36 +100,27 @@ public class MyLinkedList<E> extends AbstractList<E> {
             node = node.getNext();
         }
 
-        try{
-        if(node.data != null) {
-            newNode.next = node;
-            newNode.prev = node.prev;
-            newNode.data = element;
-            if(node.prev != null) {
-                node.prev.next = newNode;
-            }else{
-                head.next = newNode;
+        try {
+            if (node.data != null) {
+                newNode.next = node;
+                newNode.prev = node.prev;
+                newNode.data = element;
+                if (node.prev != null) {
+                    node.prev.next = newNode;
+                } else {
+                    head.next = newNode;
+                }
+                node.prev = newNode;
+            } else {
+                newNode.prev = node.prev;
+                newNode.next = tail;
+                tail.prev.next = newNode;
+                tail.prev = newNode;
             }
-            node.prev = newNode;
-        }else {
-            newNode.prev = node.prev;
-            newNode.next = tail;
-            tail.prev.next = newNode;
-            tail.prev = newNode;
-        }
-        }catch (NullPointerException e){
+        } catch (NullPointerException e) {
 
         }
-
-//        newNode.prev = current;
-//        if (newNode.prev != null) {
-//            newNode.prev.next = newNode;
-//        }
-//        newNode.next = tail;
-//        this.current = newNode;
-//        tail.prev = newNode;
-
-        size ++;
+        size++;
     }
 
 
@@ -160,17 +151,18 @@ public class MyLinkedList<E> extends AbstractList<E> {
         try {
             E elementRemoved = node.data;
             LLNode<E> prevNode = node.prev;
-            if(node.prev != null) {
+            if (node.prev != null) {
                 node.prev.next = node.next;
-            }else{
+            } else {
                 head.next = node.next;
             }
             node.next.prev = prevNode;
             size--;
             return elementRemoved;
-        }catch (NullPointerException e){
-
+        } catch (NullPointerException e) {
+            size--;
         }
+
         return null;
     }
 
