@@ -15,7 +15,7 @@ public class MarkovTextGeneratorLoLTest {
     @Test
     public void train() throws Exception {
         MarkovTextGeneratorLoL generatorLoL = new MarkovTextGeneratorLoL(new Random(12));
-        generatorLoL.train("hi there hi Leo");
+        generatorLoL.train("The boy is a boy not a girl");
         List<ListNode> currentList = generatorLoL.getWordList();
         String returnedString = "";
 
@@ -23,9 +23,13 @@ public class MarkovTextGeneratorLoLTest {
             returnedString += node.toString();
         }
 
-        assertEquals("Trained words","hi: there->Leo->\n" +
-                "there: hi->\n" +
-                "Leo: hi->\n", returnedString);
+        assertEquals("Trained words","The: boy->\n" +
+                "boy: is->not->\n" +
+                "is: a->\n" +
+                "a: boy->girl->\n" +
+                "not: a->\n" +
+                "girl: The->\n"
+                , returnedString);
     }
 
     @Test

@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a245a118-e1da-4cfc-90d2-c29edb698b3e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/textgen/MarkovTextGeneratorLoL.java" afterPath="$PROJECT_DIR$/src/textgen/MarkovTextGeneratorLoL.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/textgen/MarkovTextGeneratorLoLTest.java" afterPath="$PROJECT_DIR$/src/textgen/MarkovTextGeneratorLoLTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
@@ -57,8 +55,8 @@
       <file leaf-file-name="MarkovTextGeneratorLoLTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/textgen/MarkovTextGeneratorLoLTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+            <state relative-caret-position="119">
+              <caret line="23" column="9" lean-forward="true" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -747,23 +745,11 @@
       <workItem from="1502476116800" duration="1755000" />
       <workItem from="1502543731770" duration="1477000" />
       <workItem from="1502651936316" duration="3135000" />
-      <workItem from="1502655115563" duration="4426000" />
+      <workItem from="1502655115563" duration="4753000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="MarkovTextGeneratorLoLTest_train - 2017.08.13 at 22h 15m 20s.xml">
-      <configuration name="MarkovTextGeneratorLoLTest.train" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MarkovTextGeneratorLoLTest_train - 2017.08.13 at 22h 18m 35s.xml">
-      <configuration name="MarkovTextGeneratorLoLTest.train" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MarkovTextGeneratorLoLTest_train - 2017.08.13 at 22h 20m 13s.xml">
-      <configuration name="MarkovTextGeneratorLoLTest.train" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MarkovTextGeneratorLoLTest_train - 2017.08.13 at 22h 20m 53s.xml">
-      <configuration name="MarkovTextGeneratorLoLTest.train" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="MarkovTextGeneratorLoLTest_train - 2017.08.13 at 22h 21m 49s.xml">
       <configuration name="MarkovTextGeneratorLoLTest.train" configurationId="JUnit" />
     </history-entry>
@@ -776,15 +762,27 @@
     <history-entry file="MarkovTextGeneratorLoLTest_train - 2017.08.13 at 22h 25m 54s.xml">
       <configuration name="MarkovTextGeneratorLoLTest.train" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MyLinkedListTester_testAddEnd - 2017.08.11 at 17h 22m 20s.xml">
-      <configuration name="MyLinkedListTester.testAddEnd" configurationId="JUnit" />
+    <history-entry file="MarkovTextGeneratorLoLTest_train - 2017.08.13 at 22h 26m 13s.xml">
+      <configuration name="MarkovTextGeneratorLoLTest.train" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MyLinkedListTester_testAddEnd - 2017.08.11 at 17h 22m 49s.xml">
-      <configuration name="MyLinkedListTester.testAddEnd" configurationId="JUnit" />
+    <history-entry file="MarkovTextGeneratorLoLTest_train - 2017.08.13 at 22h 29m 30s.xml">
+      <configuration name="MarkovTextGeneratorLoLTest.train" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MarkovTextGeneratorLoLTest_train - 2017.08.13 at 22h 30m 23s.xml">
+      <configuration name="MarkovTextGeneratorLoLTest.train" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MarkovTextGeneratorLoLTest_train - 2017.08.13 at 22h 30m 57s.xml">
+      <configuration name="MarkovTextGeneratorLoLTest.train" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MarkovTextGeneratorLoLTest_train - 2017.08.13 at 22h 31m 08s.xml">
+      <configuration name="MarkovTextGeneratorLoLTest.train" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MarkovTextGeneratorLoLTest_train - 2017.08.13 at 22h 31m 19s.xml">
+      <configuration name="MarkovTextGeneratorLoLTest.train" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58777000" />
+    <option name="totallyTimeSpent" value="59104000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1231,8 +1229,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/textgen/MarkovTextGeneratorLoLTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        <state relative-caret-position="119">
+          <caret line="23" column="9" lean-forward="true" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
