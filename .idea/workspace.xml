@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a245a118-e1da-4cfc-90d2-c29edb698b3e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/textgen/MarkovTextGeneratorLoL.java" afterPath="$PROJECT_DIR$/src/textgen/MarkovTextGeneratorLoL.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,8 +39,8 @@
       <file leaf-file-name="MarkovTextGeneratorLoL.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/textgen/MarkovTextGeneratorLoL.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
-              <caret line="182" column="47" lean-forward="false" selection-start-line="182" selection-start-column="47" selection-end-line="182" selection-end-column="47" />
+            <state relative-caret-position="226">
+              <caret line="140" column="9" lean-forward="true" selection-start-line="140" selection-start-column="9" selection-end-line="140" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -740,7 +740,7 @@
       <workItem from="1502543731770" duration="1477000" />
       <workItem from="1502651936316" duration="3135000" />
       <workItem from="1502655115563" duration="4828000" />
-      <workItem from="1502700225817" duration="8210000" />
+      <workItem from="1502700225817" duration="8403000" />
     </task>
     <servers />
   </component>
@@ -777,7 +777,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67389000" />
+    <option name="totallyTimeSpent" value="67582000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -794,7 +794,7 @@
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="92" y="92" width="1170" height="544" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31623933" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31623933" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44957265" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1198,8 +1198,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/textgen/MarkovTextGeneratorLoL.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="182" column="47" lean-forward="false" selection-start-line="182" selection-start-column="47" selection-end-line="182" selection-end-column="47" />
+        <state relative-caret-position="226">
+          <caret line="140" column="9" lean-forward="true" selection-start-line="140" selection-start-column="9" selection-end-line="140" selection-end-column="9" />
           <folding />
         </state>
       </provider>
