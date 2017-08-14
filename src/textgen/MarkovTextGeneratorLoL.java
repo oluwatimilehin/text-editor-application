@@ -136,7 +136,7 @@ public class MarkovTextGeneratorLoL implements MarkovTextGenerator {
                 }
 
             }
-        } else{
+        } else {
             System.out.println("Empty string");
         }
 
@@ -147,43 +147,41 @@ public class MarkovTextGeneratorLoL implements MarkovTextGenerator {
      */
     @Override
     public String generateText(int numWords) {
-       String output = "";
-       String nextWord = "";
-       int index = 0;
-        ListNode currentNode = wordList.get(0);
-        while (true){
-            if(index < numWords) {
-                output += " " + currentNode.getWord();
+
+        if(!wordList.isEmpty()) {
+
+            String output = "";
+            String nextWord = "";
+            int index = 0;
+            ListNode currentNode = wordList.get(0);
+
+            if (index < numWords) {
+                output += currentNode.getWord();
                 index++;
             }
             nextWord = currentNode.getRandomNextWord(rnGenerator);
-            if(index < numWords) {
+            if (index < numWords) {
                 output += " " + nextWord;
                 index++;
             }
 
-            int loopIndex = 0;
-
             ListNode nextWordNode = new ListNode(nextWord);
-            for(ListNode node: wordList){
-                if (nextWordNode.equals(node)){
-                    nextWord = node.getRandomNextWord(rnGenerator);
-                    if(index < numWords) {
+            while (index < numWords) {
+                for (ListNode node : wordList) {
+                    if (nextWordNode.equals(node)) {
+                        nextWord = node.getRandomNextWord(rnGenerator);
                         output += " " + nextWord;
-                        currentNode = wordList.get(loopIndex);
-                        index ++;
+                        index++;
+                        nextWordNode = new ListNode(nextWord);
                     }
-
                 }
-                loopIndex++;
+
             }
 
-            if(index == numWords){
-                break;
-            }
+            return output;
+        }else{
+            return  "Nothing has been trained";
         }
-
-        return output;
     }
 
     // Can be helpful for debugging
