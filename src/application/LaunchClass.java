@@ -29,7 +29,7 @@ public class LaunchClass {
         spelling.DictionaryLoader.loadDictionary(tr, dictFile);
         return tr;
     }
-    
+
     public spelling.Dictionary getDictionary() {
         spelling.Dictionary d = new spelling.DictionaryBST();
         spelling.DictionaryLoader.loadDictionary(d, dictFile);

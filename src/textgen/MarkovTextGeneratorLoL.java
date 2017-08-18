@@ -11,28 +11,19 @@ import java.util.regex.Pattern;
  */
 public class MarkovTextGeneratorLoL implements MarkovTextGenerator {
 
-    public List<ListNode> getWordList() {
-        return wordList;
-    }
-
     // The list of words with their next words
     private List<ListNode> wordList;
-
     private List<String> currentWords = new ArrayList<>();
-
     // The starting "word"
     private String starter;
-
     // The random number generator
     private Random rnGenerator;
-
 
     public MarkovTextGeneratorLoL(Random generator) {
         wordList = new LinkedList<ListNode>();
         starter = "";
         rnGenerator = generator;
     }
-
 
     /**
      * This method returns a list of the strings that matched a particular pattern
@@ -97,6 +88,10 @@ public class MarkovTextGeneratorLoL implements MarkovTextGenerator {
         System.out.println(gen.generateText(20));
     }
 
+    public List<ListNode> getWordList() {
+        return wordList;
+    }
+
     /**
      * Train the generator by adding the sourceText
      */
@@ -148,7 +143,7 @@ public class MarkovTextGeneratorLoL implements MarkovTextGenerator {
     @Override
     public String generateText(int numWords) {
 
-        if(!wordList.isEmpty()) {
+        if (!wordList.isEmpty()) {
 
             String output = "";
             String nextWord = "";
@@ -179,8 +174,8 @@ public class MarkovTextGeneratorLoL implements MarkovTextGenerator {
             }
 
             return output;
-        }else{
-            return  "Nothing has been trained";
+        } else {
+            return "Nothing has been trained";
         }
     }
 
@@ -199,7 +194,7 @@ public class MarkovTextGeneratorLoL implements MarkovTextGenerator {
      */
     @Override
     public void retrain(String sourceText) {
-        wordList = new LinkedList<ListNode>();
+        wordList.clear();
         starter = "";
 
         this.train(sourceText);
