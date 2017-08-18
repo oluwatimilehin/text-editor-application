@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a245a118-e1da-4cfc-90d2-c29edb698b3e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/spelling/DictionaryLL.java" afterPath="$PROJECT_DIR$/src/spelling/DictionaryLL.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/spelling/DictionaryBST.java" afterPath="$PROJECT_DIR$/src/spelling/DictionaryBST.java" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,27 +25,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DictionaryLL.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/spelling/DictionaryLL.java">
+      <file leaf-file-name="DictionaryBST.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/spelling/DictionaryBST.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="83">
-              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state relative-caret-position="107">
+              <caret line="24" column="39" lean-forward="false" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
               <folding>
-                <element signature="e#244#245#0" expanded="true" />
-                <element signature="e#285#286#0" expanded="true" />
-                <element signature="e#808#809#0" expanded="true" />
-                <element signature="e#861#862#0" expanded="true" />
+                <element signature="e#217#218#0" expanded="true" />
+                <element signature="e#255#256#0" expanded="true" />
+                <element signature="e#787#788#0" expanded="true" />
+                <element signature="e#821#822#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DictionaryLLTester.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/spelling/DictionaryLLTester.java">
+      <file leaf-file-name="DictionaryBSTTester.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/spelling/DictionaryBSTTester.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="109">
-              <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-              <folding />
+              <caret line="108" column="0" lean-forward="false" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -86,6 +87,7 @@
         <option value="$PROJECT_DIR$/src/textgen/MarkovTextGeneratorLoL.java" />
         <option value="$PROJECT_DIR$/src/application/LaunchClass.java" />
         <option value="$PROJECT_DIR$/src/spelling/DictionaryLL.java" />
+        <option value="$PROJECT_DIR$/src/spelling/DictionaryBST.java" />
       </list>
     </option>
   </component>
@@ -169,7 +171,32 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.DictionaryLLTester">
+  <component name="RunManager" selected="JUnit.DictionaryBSTTester">
+    <configuration name="DictionaryBSTTester" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="spelling.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="MOOCTextEditor" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="spelling" />
+      <option name="MAIN_CLASS_NAME" value="spelling.DictionaryBSTTester" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
     <configuration name="DictionaryLLTester" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -257,25 +284,6 @@
       </option>
       <envs />
       <patterns />
-    </configuration>
-    <configuration name="MyLinkedListGrader" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="textgen.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="textgen.MyLinkedListGrader" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="MOOCTextEditor" />
-      <envs />
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
@@ -650,19 +658,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.MyLinkedListGrader" />
-      <item index="1" class="java.lang.String" itemvalue="Application.MarkovTextGeneratorLoL" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.MarkovTextGeneratorLoLTest.train" />
-      <item index="3" class="java.lang.String" itemvalue="Application.MainApp" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.DictionaryLLTester" />
+      <item index="0" class="java.lang.String" itemvalue="Application.MarkovTextGeneratorLoL" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.MarkovTextGeneratorLoLTest.train" />
+      <item index="2" class="java.lang.String" itemvalue="Application.MainApp" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.DictionaryLLTester" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.DictionaryBSTTester" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.DictionaryLLTester" />
-        <item index="1" class="java.lang.String" itemvalue="Application.MainApp" />
-        <item index="2" class="java.lang.String" itemvalue="Application.MarkovTextGeneratorLoL" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.MarkovTextGeneratorLoLTest.train" />
-        <item index="4" class="java.lang.String" itemvalue="Application.MyLinkedListGrader" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.DictionaryBSTTester" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.DictionaryLLTester" />
+        <item index="2" class="java.lang.String" itemvalue="Application.MainApp" />
+        <item index="3" class="java.lang.String" itemvalue="Application.MarkovTextGeneratorLoL" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.MarkovTextGeneratorLoLTest.train" />
       </list>
     </recent_temporary>
   </component>
@@ -696,11 +704,14 @@
       <workItem from="1502700225817" duration="10140000" />
       <workItem from="1502712858189" duration="5318000" />
       <workItem from="1503053844471" duration="1140000" />
-      <workItem from="1503060345243" duration="1354000" />
+      <workItem from="1503060345243" duration="2365000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
+    <history-entry file="DictionaryBSTTester - 2017.08.18 at 15h 49m 08s.xml">
+      <configuration name="DictionaryBSTTester" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="DictionaryLLTester - 2017.08.18 at 15h 20m 24s.xml">
       <configuration name="DictionaryLLTester" configurationId="JUnit" />
     </history-entry>
@@ -710,11 +721,8 @@
     <history-entry file="DictionaryLLTester - 2017.08.18 at 15h 25m 57s.xml">
       <configuration name="DictionaryLLTester" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MarkovTextGeneratorLoLTest_train - 2017.08.13 at 22h 29m 30s.xml">
-      <configuration name="MarkovTextGeneratorLoLTest.train" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MarkovTextGeneratorLoLTest_train - 2017.08.13 at 22h 30m 23s.xml">
-      <configuration name="MarkovTextGeneratorLoLTest.train" configurationId="JUnit" />
+    <history-entry file="DictionaryLLTester - 2017.08.18 at 15h 26m 59s.xml">
+      <configuration name="DictionaryLLTester" configurationId="JUnit" />
     </history-entry>
     <history-entry file="MarkovTextGeneratorLoLTest_train - 2017.08.13 at 22h 30m 57s.xml">
       <configuration name="MarkovTextGeneratorLoLTest.train" configurationId="JUnit" />
@@ -733,7 +741,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77131000" />
+    <option name="totallyTimeSpent" value="78142000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
@@ -793,20 +801,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/textgen/MarkovTextGeneratorLoLTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/textgen/MyLinkedListGrader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/textgen/MyLinkedListTester.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2278">
@@ -1146,13 +1140,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/spelling/DictionaryLL.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state relative-caret-position="293">
+          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding>
             <element signature="e#244#245#0" expanded="true" />
             <element signature="e#285#286#0" expanded="true" />
             <element signature="e#808#809#0" expanded="true" />
             <element signature="e#861#862#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/spelling/DictionaryBSTTester.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="108" column="0" lean-forward="false" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/spelling/DictionaryBST.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="24" column="39" lean-forward="false" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
+          <folding>
+            <element signature="e#217#218#0" expanded="true" />
+            <element signature="e#255#256#0" expanded="true" />
+            <element signature="e#787#788#0" expanded="true" />
+            <element signature="e#821#822#0" expanded="true" />
           </folding>
         </state>
       </provider>
