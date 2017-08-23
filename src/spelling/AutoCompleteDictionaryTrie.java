@@ -1,10 +1,7 @@
 package spelling;
 
-import java.util.List;
-import java.util.Set;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.LinkedList;
+import javax.swing.tree.TreeNode;
+import java.util.*;
 
 /**
  * An trie data structure that implements the Dictionary and the AutoComplete ADT
@@ -52,7 +49,7 @@ public class AutoCompleteDictionaryTrie implements Dictionary, AutoComplete {
             }
         }
 
-        if(newNode.endsWord()){
+        if (newNode.endsWord()) {
             return false;
         }
 
@@ -86,12 +83,13 @@ public class AutoCompleteDictionaryTrie implements Dictionary, AutoComplete {
 
             if (childNode == null) {
                 return currentNode.getText().equals(s);
-            }else{
+            } else {
                 currentNode = childNode;
             }
         }
 
-       if( s.length() > 1 && currentNode.getText().equals(s)) return true;
+        if (s.length() > 1 && currentNode.getText().equals(s))
+            return true;
 
         return false;
     }
@@ -140,7 +138,6 @@ public class AutoCompleteDictionaryTrie implements Dictionary, AutoComplete {
      */
     @Override
     public List<String> predictCompletions(String prefix, int numCompletions) {
-        // TODO: Implement this method
         // This method should implement the following algorithm:
         // 1. Find the stem in the trie.  If the stem does not appear in the trie, return an
         //    empty list
@@ -155,6 +152,42 @@ public class AutoCompleteDictionaryTrie implements Dictionary, AutoComplete {
         //       Add all of its child nodes to the back of the queue
         // Return the list of completions
 
-        return null;
+        prefix = prefix.toLowerCase();
+        LinkedList<TrieNode> queue = new LinkedList<>();
+        ArrayList<String> completions = new ArrayList<>();
+        TrieNode node = root;
+
+        for (char c : prefix.toCharArray()) {
+            TrieNode currentNode = node.getChild(c);
+
+            if (currentNode == null) {
+                return completions;
+            }
+
+            node = currentNode;
+        }
+
+        queue.add(node);
+
+        while (!queue.isEmpty() && completions.size() < numCompletions) {
+            TrieNode currentNode = queue.poll();
+
+            if(currentNode.endsWord()){
+                completions.add(currentNode.getText());
+            }
+
+
+            for(Character c : currentNode.getValidNextCharacters()){
+                TrieNode newNode = currentNode.getChild(c);
+
+                if(newNode != null){
+                    queue.add(newNode);
+
+                }
+            }
+
+
+            }
+        return completions;
     }
 }
