@@ -3,10 +3,7 @@
  */
 package spelling;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 
 /**
@@ -125,7 +122,7 @@ public class NearbyWords implements SpellingSuggest {
     public List<String> suggestions(String word, int numSuggestions) {
 
         // initial variables
-        List<String> queue = new LinkedList<String>();     // String to explore
+        Queue<String> queue = new LinkedList<String>();     // String to explore
         HashSet<String> visited = new HashSet<String>();   // to avoid exploring the same
         // string multiple times
         List<String> retList = new LinkedList<String>();   // words to return
@@ -135,7 +132,22 @@ public class NearbyWords implements SpellingSuggest {
         queue.add(word);
         visited.add(word);
 
-        // TODO: Implement the remainder of this method, see assignment for algorithm
+        while (retList.size() <= numSuggestions && !queue.isEmpty()){
+            String curr =  queue.poll();
+            List<String> neighbours = distanceOne(curr, true);
+
+            for(String neighbour : neighbours){
+                if(!visited.contains(neighbour)){
+                    visited.add(neighbour);
+                    queue.add(neighbour);
+
+                    if(dict.isWord(neighbour) && retList.size() <= numSuggestions){
+                        retList.add(neighbour);
+                    }
+                }
+            }
+
+        }
 
         return retList;
 
